@@ -1,0 +1,166 @@
+@import '../../styles/abstracts/mixins';
+@import '../../styles/abstracts/variables';
+
+.Hamburger{
+  height: 3rem;
+  width: 3rem;
+  transition: all 1s;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+
+  @include respond(desktop){
+    display: none;
+  } 
+  @include respond(tab-land){
+    display: none;
+  }
+
+  @include respond(tab-port){
+    display: none;
+  }
+
+  @include respond(phone){
+    display: block;
+  }
+
+}
+
+.Bar1{
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #8db6c7;
+  position: relative;
+  left: 0.5rem;
+  top: 1.9rem;
+  transition: all 0.7s;
+}
+
+.Bar1Clicked{
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #8db6c7;
+  position: relative;
+  left: 0.5rem;
+  transition: all 0.7s;
+  
+  top: 1.4rem;
+  transform: rotate(405deg)
+}
+
+.Bar2{
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #ca9f92;
+  position: relative;
+  left: 0.5rem;
+  top: 1.25rem;
+  transition: all 0.7s;
+}
+
+.Bar3{
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #b1c27a;
+  position: relative;
+  left: 0.5rem;
+  top: 0.6rem;
+  transition: all 0.7s;
+}
+
+.Bar3Clicked{
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #b1c27a;
+  position: relative;
+  left: 0.5rem;
+  top: 1rem;
+  transform: rotate(-405deg);
+  transition: all 0.7s;
+}
+
+.Invisible {
+  width: 2rem;
+  height: 0.2rem;
+  background-color: transparent;
+  position: relative;
+  left: 0.5rem;
+  top: 1.25rem;
+  opacity: 0;
+  transition: all 0.7s;
+}
+
+.MenuInvisible{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  transform: scale(0);
+  background-image: linear-gradient(to right bottom, #0c8e7d, #844d6c);
+  border-radius: 50rem;
+  color: $color-white;
+  z-index: 50;
+  transition: all 0.5s;
+
+  @include respond(desktop){
+    display: none;
+  } 
+  @include respond(tab-land){
+    display: none;
+  }
+
+  @include respond(tab-port){
+    display: none;
+  }
+
+  @include respond(phone){
+    display: block;
+  }
+
+   &__list{
+     display: none;
+    
+   }
+}
+
+.MenuVisible{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+
+  background-image: linear-gradient(to right bottom, #0c8e7d, #844d6c);
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  transition: all 0.5s;
+
+  @include respond(desktop){
+    display: none;
+  } 
+  @include respond(tab-land){
+    display: none;
+  }
+
+  @include respond(tab-port){
+    display: none;
+  }
+
+  @include respond(phone){
+    display: block;
+  }
+
+
+  &__list{
+    margin-top: 8rem;
+    list-style: none;
+    display: block;
+
+    & li {
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+  }
+}

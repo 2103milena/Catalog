@@ -1,0 +1,42 @@
+@import '../../styles/abstracts/variables';
+@import '../../styles/abstracts/mixins';
+
+.Search{
+    padding: 1rem;
+    border-radius: 50px;
+
+
+    @include respond(tab-land){
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include respond(phone){
+        position: relative;
+    }
+
+    &__Label{
+        position: relative;
+        right: 0.5rem;
+        color: $color-white;
+    }
+    &__svg{
+        color: $color-white;
+        margin-left: 1rem;
+        position: relative;
+        top: 2px;
+    }
+
+    &__input{
+        background-color: $color-white;
+        border: 2px solid $color-white;
+        @include borderRadius;
+        position: relative;
+        color: $color-blue-dark;
+        width: 12rem;
+    
+        &:focus{
+            border: 2px solid $color-white;
+        }
+    }
+} 

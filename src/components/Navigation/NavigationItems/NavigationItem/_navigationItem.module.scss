@@ -1,0 +1,23 @@
+@import '../../../../styles/abstracts/variables';
+@import '../../../../styles/abstracts/mixins';
+
+.Link{
+    text-decoration: none;
+    margin-right: 1rem;
+    padding: 0.2rem;
+    color: $color-white;   
+    transition: all 0.2s;
+
+    @include respond(phone){
+        margin-right: none;
+    }
+
+    &:hover{
+        color: $color-grey-hover;
+        
+    };
+
+    &:active{
+        color: $color-grey;
+    }
+}

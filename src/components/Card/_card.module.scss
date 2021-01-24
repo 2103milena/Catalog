@@ -1,0 +1,73 @@
+@import '../../styles/abstracts/mixins';
+@import '../../styles/abstracts/variables';
+
+
+
+.Card{
+    margin: 1rem;
+    background-color: rgba($color-white, 0.5);
+    border-radius: 20px;
+    overflow: hidden;  
+
+    &__img{
+        width: 10rem;
+    }
+
+    &__section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        // font-size: small;
+    }
+
+    &__section2{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.7rem;    
+    }
+
+    &__title{
+        background-color: $color-blue-dark;
+        color: $color-white;
+        font-weight: 700;
+        padding: 0.1rem;
+        text-transform: uppercase;
+    }
+
+    &__button{
+        padding: 0.5rem 0;
+        border: solid 1px $color-grey;
+
+        &:nth-child(3){
+            grid-row: 1/3;
+            background-color: rgba($color-blue-dark, 0.5);
+            color: $color-white;
+        }
+
+        &:nth-child(1){
+            background-color: rgba($color-blue-dark, 0.5);
+            color: $color-white;
+        }
+        &:nth-child(5){
+            background-color: rgba($color-blue-dark, 0.5);
+            color: $color-white;
+        }
+        &:nth-child(2){
+            background-color: rgba($color-blue-dark, 0.5);
+            color: $color-white;
+        }
+        &:nth-child(4){
+            background-color: rgba($color-blue-dark, 0.5);
+            color: $color-white;
+        }
+    }
+
+    &__buttons{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        // width: 102%;
+        grid-gap: 0.2rem;
+    }
+}

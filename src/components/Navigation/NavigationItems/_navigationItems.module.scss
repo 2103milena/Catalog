@@ -1,0 +1,30 @@
+@import '../../../styles/abstracts/variables';
+@import '../../../styles/abstracts/mixins';
+
+.DivNav{
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-blue-dark;
+
+    &__UlNav{
+        list-style: none;
+        display: flex; 
+        padding-top: 1rem;
+
+        @include respond(phone){
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 1rem;
+            text-align: end;
+        }
+    }
+
+    @include respond(phone){
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: end;
+    }
+}
+
+
+
