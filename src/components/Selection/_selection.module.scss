@@ -1,0 +1,37 @@
+@import '../../styles/abstracts/variables';
+
+.Selection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    
+
+    &__select {
+        width: 50px;
+        height: 30px;
+        border-radius: 8px;
+        background-color: $color-blue-dark;
+        color: $color-white;
+        border: none;
+    }
+
+    // &__buttons{
+    //     margin-right: 0.9rem;
+    // }
+
+    &__button{
+        background-color: $color-blue-dark;
+        width: 60px;
+        height: 30px;
+        margin-left: 1rem;
+        color: $color-white;
+        border: none;
+        border-radius: 8px;
+
+        &:disabled{
+            opacity: 0.5;
+            color: $color-grey;
+        }
+    }
+}

@@ -3,6 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import axios from 'axios';
+
+// axios.interceptors.request.use(request =>{
+//   console.log(request);
+//   return request;
+// })
+
+// axios.interceptors.response.use(request =>{
+//   console.log(request);
+//   return request;
+// })
+
 
 ReactDOM.render(
   <React.StrictMode>
